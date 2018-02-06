@@ -10,6 +10,7 @@ export interface IKafkaOptions {
   port: string
   logger?: Logger,
   groupId?: any,
+    maxMessageSize?: number,
 }
 
 export interface IKafkaProducer {
@@ -83,7 +84,8 @@ export class KafkaPubSub implements PubSubEngine {
 
   private createProducer(topic: string) {
     const producer = Kafka.Producer.createWriteStream({
-      'metadata.broker.list': `${this.options.host}:${this.options.port}`
+      'metadata.broker.list': `${this.options.host}:${this.options.port}`,
+        'message.max.bytes': this.options.maxMessageSize || undefined,
     }, {}, { topic })
     producer.on('error', (err) => {
       this.logger.error(err, 'Error in our kafka stream')
