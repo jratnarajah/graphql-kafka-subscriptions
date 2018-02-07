@@ -59,7 +59,8 @@ var KafkaPubSub = (function () {
     KafkaPubSub.prototype.createProducer = function (topic) {
         var _this = this;
         var producer = Kafka.Producer.createWriteStream({
-            'metadata.broker.list': this.options.host + ":" + this.options.port
+            'metadata.broker.list': this.options.host + ":" + this.options.port,
+            'message.max.bytes': this.options.maxMessageSize || undefined,
         }, {}, { topic: topic });
         producer.on('error', function (err) {
             _this.logger.error(err, 'Error in our kafka stream');
