@@ -1,6 +1,6 @@
 {
-  "name": "graphql-kafka-subscriptions",
-  "version": "0.2.2",
+  "name": "@rcanalytics/rca-graphql-kafka-subscriptions",
+  "version": "0.2.3",
   "description": "Apollo graphql subscription over Kafka protocol",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ancashoria/graphql-kafka-subscriptions.git"
+    "url": "git+https://github.com/jratnarajah/graphql-kafka-subscriptions.git"
   },
   "keywords": [
     "graphql",
@@ -19,12 +19,12 @@
     "apollo",
     "subscriptions"
   ],
-  "author": "Ancas Horia",
+  "author": "Josh Ratnarajah",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ancashoria/graphql-kafka-subscriptions/issues"
+    "url": "https://github.com/jratnarajah/graphql-kafka-subscriptions/issues"
   },
-  "homepage": "https://github.com/ancashoria/graphql-kafka-subscriptions#readme",
+  "homepage": "https://github.com/jratnarajah/graphql-kafka-subscriptions#readme",
   "jest": {
     "roots": [
       "<rootDir>/src/test"
